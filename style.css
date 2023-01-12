@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+}
+
+.left-side {
+    background-color: antiquewhite;
+    width: 400px;
+    height: 100vh;
+    padding: 20px;
+}
+
+.left-side h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+}
+
+.right-side {
+    background-color: #2f2c2b;
+    width: 100%;
+    color: white;
+}
+
+.todo-container {
+    padding-top: 30px;
+}
+
+.todo {
+    border: 2px solid white;
+    padding: 16px;
+    font-size: 22px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 25px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.todo:hover {
+    background-color: black;
+}
+
+i {
+    cursor: pointer;
+}
+
+i:hover {
+    transform: scale(1.5);
+}

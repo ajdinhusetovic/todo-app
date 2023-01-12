@@ -1,6 +1,7 @@
 const addTodoButton = document.querySelector('#add-todo');
-const todoContainer = document.querySelector('.todo-container');
+const todoContainer = document.querySelector('.todo-row');
 const leftSide = document.querySelector('.left-side');
+
 
 
 // event listener for add todo button
@@ -17,12 +18,23 @@ addTodoButton.addEventListener('click', () => {
             if (e.keyCode === 13){
                 let todo = document.createElement('li');
                 todo.textContent = todoInput.value;
-                todo.innerHTML = `${todo.textContent} <i class="fa-regular fa-trash-can"></i>`
+                todo.innerHTML = `${todo.textContent}`
                 todo.classList.add('todo');
                 todoContainer.appendChild(todo);
+
+                let icon = document.createElement('div');
+                icon.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
+                todoContainer.appendChild(icon);
+
                 // shows button, hides input
                 addTodoButton.hidden = false;
                 todoInput.hidden = true;
+
+                todo.addEventListener('click', () => {
+                    todo.style = `background-color: green;`
+                });
+
+                
             }
         }
     });

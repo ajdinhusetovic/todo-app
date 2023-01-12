@@ -36,18 +36,25 @@ body {
 
 .todo-container {
     padding-top: 30px;
+    
+}
+
+.todo-row {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .todo {
+    width: 100%;
     border: 2px solid white;
-    padding: 16px;
     font-size: 26px;
-    width: 70%;
-    margin: auto;
+    padding: 16px;
     margin-bottom: 25px;
     list-style: none;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     cursor: pointer;
 }

@@ -10,6 +10,7 @@ body {
     line-height: 1.5;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 500;
+    overflow-y: auto;
 }
 
 .container {
@@ -19,7 +20,6 @@ body {
 .left-side {
     background-color: antiquewhite;
     width: 400px;
-    height: 100vh;
     padding: 20px;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 .todo-container {
-    padding-top: 30px;
+    padding-top: 85px;
     display: flex;
     flex-direction: column;
 }

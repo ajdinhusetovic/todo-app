@@ -26,6 +26,7 @@ body {
 .left-side h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 4rem;
+    margin-bottom: 20px;
 }
 
 .right-side {

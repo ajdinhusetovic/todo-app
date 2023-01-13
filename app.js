@@ -1,5 +1,5 @@
 const addTodoButton = document.querySelector('#add-todo');
-const todoContainer = document.querySelector('.todo-row');
+const todoContainer = document.querySelector('.todo-container');
 const leftSide = document.querySelector('.left-side');
 
 
@@ -16,25 +16,22 @@ addTodoButton.addEventListener('click', () => {
             alert("Please enter your todo");
         } else {
             if (e.keyCode === 13){
-                let todo = document.createElement('li');
-                todo.textContent = todoInput.value;
-                todo.innerHTML = `${todo.textContent}`
+                
+                let todoRow = document.createElement('div');
+                todoRow.classList.add('todo-row');
+
+                let todo = document.createElement('div');
+                todo.innerHTML = todoInput.value;
                 todo.classList.add('todo');
-                todoContainer.appendChild(todo);
 
                 let icon = document.createElement('div');
                 icon.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
-                todoContainer.appendChild(icon);
+                icon.classList.add('icon');
 
-                // shows button, hides input
-                addTodoButton.hidden = false;
-                todoInput.hidden = true;
+                todoRow.appendChild(todo);
+                todoRow.appendChild(icon);
+                todoContainer.appendChild(todoRow);
 
-                todo.addEventListener('click', () => {
-                    todo.style = `background-color: green;`
-                });
-
-                
             }
         }
     });

@@ -36,15 +36,15 @@ body {
 
 .todo-container {
     padding-top: 30px;
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .todo-row {
     display: flex;
+    flex-direction: row;
     width: 70%;
     margin: auto;
-    align-items: center;
-    justify-content: center;
 }
 
 .todo {
@@ -59,6 +59,11 @@ body {
     cursor: pointer;
 }
 
+.icon {
+    font-size: 40px;
+    padding: 8px;
+}
+
 .todo:hover {
     background-color: gray;
 }
@@ -68,7 +73,8 @@ i {
 }
 
 i:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
+    color: red;
 }
 
 #add-todo {

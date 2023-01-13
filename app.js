@@ -32,6 +32,20 @@ addTodoButton.addEventListener('click', () => {
                 todoRow.appendChild(icon);
                 todoContainer.appendChild(todoRow);
 
+                todoInput.value = "";
+
+                todo.addEventListener('click', () => {
+                    todo.style = 
+                    `
+                    background-color: green;
+                    `;
+                });
+
+                icon.addEventListener('click', () => {
+                    todo.remove();
+                    icon.remove();
+                })
+
             }
         }
     });
